@@ -1,0 +1,432 @@
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}% Pozwala pisać polskie znaki bezpośrednio.
+\usepackage[polish]{babel}% Tłumaczy na polski teksty automatyczne LaTeXa i pomaga z typografią.
+\usepackage[MeX]{polski}% Polska notacja we wzorach matematycznych. Ładne polskie
+\usepackage{microtype}
+\let\lll\undefined
+\usepackage{amsmath, amssymb, amscd, amsfonts}% Czcionki matematyczne od American Mathematic Society.
+\usepackage{latexsym}% Więcej symboli.
+\usepackage{textcomp}% Pakiet z dziwnymi symbolami.
+% \usepackage{slashed}% Pozwala pisać slash Feynmana.
+\usepackage{xy}% Pozwala rysować grafy.
+\usepackage{tensor}% Pozwala prosto używać notacji tensorowej. Albo nawet pięknej notacji
+% tensorowej:).
+% \usepackage{graphicx}% Pozwala wstawiać grafikę.
+\usepackage{csquotes}
+\usepackage{xcolor}
+\usepackage{vmargin}
+%----------------------------------------------------------------------
+% MARGINS
+%----------------------------------------------------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+\usepackage{hyperref}
+% #####################################################################
+
+
+\newcommand{\spaceOne}{1.5em}
+\newcommand{\spaceTwo}{1em}
+\newcommand{\spaceThree}{0.5em}
+
+
+\newcommand{\tb}{\textbf}
+\newcommand{\noi}{\noindent}
+\newcommand{\start}{\noi \tb{--} {}}
+\newcommand{\Center}[1]{\begin{center} #1 \end{center}}
+\newcommand{\CenterTB}[1]{\Center{\tb{#1}}}
+\newcommand{\Str}[1]{\tb{Str. #1.}}
+\newcommand{\StrWg}[2]{\tb{Str. #1, wiersz #2.} \\}
+\newcommand{\StrWd}[2]{\tb{Str. #1, wiersz #2 (od dołu).} \\}
+\newcommand{\Jest}{\tb{Jest: }}
+\newcommand{\Pow}{\tb{Powinno być: }}
+\newcommand{\Prze}{{\color{red} Przemyśl.}}
+\newcommand{\Dok}{{\color{red} Dokończ.}}
+\newcommand{\Main}[1]{ \begin{center} {\LARGE \tb{#1} } \end{center} }
+\newcommand{\Field}[1]{ \begin{center} {\Large \tb{#1} } \end{center} }
+\newcommand{\Work}[1]{ \begin{center} {\large \tb{#1}} \end{center} }
+
+
+\renewcommand{\arraystretch}{1.2}
+
+
+
+% #####################################################################
+% #####################################################################
+\begin{document}
+% #####################################################################
+% #####################################################################
+
+
+
+% #####################################################################
+\Main{Warte poznania}
+% #####################################################################
+
+
+
+% #####################################################################
+\Field{Najważniejsze} % \vspace{\spaceOne}
+
+
+\begin{enumerate}
+\item Platon, \emph{Eutyfron};
+\item Platon, \emph{Obrona Sokratesa};
+\item Platon, \emph{Kriton};
+\item Platon, \emph{Państwo};
+\item Arystoteles, \emph{Etyka nikomochejska};
+\item Arystoteles, \emph{Poetyka};
+\item Św. Augustyn, \emph{Wyznania};
+\item Św. Augustyn, \emph{Państwo Boże};
+\end{enumerate}
+
+\vspace{\spaceTwo}
+
+
+
+\Center{Dłuższe} % \vspace{\spaceOne}
+
+
+\begin{enumerate}
+\item Frederick Copleston SJ, \emph{Historia filozofii}\footnote{Co
+    z~tego, że~długa, ta książka jest wspaniała.};
+\end{enumerate}
+
+\vspace{\spaceTwo}
+
+
+
+% #####################################################################
+\Field{Również warte poznania}
+
+
+
+\begin{enumerate}
+\item Paul Johnson, \emph{Historia świata XX wieku}
+  (tyt.~ang.~\emph{Modern Times});
+\item Eric Voegelin, \emph{Nowa nauka polityki}
+  (tyt.~ang.~\emph{The~New Science~of Politics: An~Introduction});
+\item Tony Judt, \emph{Powojnie. Historia Europy od~roku 1945}
+  (tyt.~ang.~\emph{Postwar: A~History~of Europe Since 1945});
+\item Christoper Ferrara, \emph{Liberty, the~God That Failed: Policing
+    the~Sacred and~Constructing the~Myths~of the~Secular State, from
+    Locke to~Obama};
+\item Philipp Ther, \emph{Nowy ład na Starym Kontynencie. Historia
+    neoliberalnej Europy} (tyt.~ang.~\emph{Die~neue Ordnung auf
+    dem~alten Kontinent: Eine Geschichte des~neoliberalen Europa});
+\item E. Michael Jones, \emph{Jałowy pieniądz. Historia kapitalizmu
+    jako konfliktu między pracą a~lichwą}.
+\item Anatolij Golicyn, \emph{Nowe kłamstwa w~miejsce starych}.
+\item Paul Johnson, \emph{Narodziny nowoczesności}.
+\item Samuel P. Huntington, \emph{Zderzenie cywilizacji}.
+\item Paweł Rzewuski,
+  \href{http://www.teologiapolityczna.pl/pawel-rzewuski-ameryka-kontuszem-podszyta-tpct-14-/}{\emph{Ameryka
+      kontuszem podszyta}}.
+\end{enumerate}
+
+\vspace{\spaceOne}
+
+
+
+\CenterTB{YouTube}
+
+
+\begin{enumerate}
+\item Andrzej Nowak,
+  \href{https://www.youtube.com/playlist?list=PLqhZl7VBClOhcjd-y9HF3aUMAIlghQj-l}
+  {\emph{Historia myśli politycznej}};
+\item Dr Tomasz ,,Awesome'' Majkowski\footnote{Książki George Lakoffa
+    na które~się dr Majkowski powołuje to \emph{Nie myśl o słoniu! Jak
+      język kształtuje politykę. Obowiązkowa lektura dla myślących
+      postępowo} oraz~\emph{Kobiety, ogień i~rzeczy niebezpieczne. Co
+      kategorie mówią nam o~umyśle}.},
+  \href{https://www.youtube.com/watch?v=jN8h_jLOdnw}{\emph{Plugawi
+      zwyrodnialcy}}\emph{, czyli dlaczego konserwatyści nie~znoszą
+    gier wideo};
+\item Bogusław Skowronek,
+  \href{https://www.youtube.com/watch?v=oX5nS3RPZLI\&t=616s}{\emph{Wykład
+      o~teorii dyskursów w~kinie}}, \emph{na przykładzie filmów
+    ,,Matka Joanna od~aniołów'' i~,,Krzyżacy''}.
+\item Peter Robinson i~Andrew Roberts,
+  \href{https://www.youtube.com/watch?v=kx0iwRO6jas\&t=4s}{\emph{The
+      Storm of War}}.
+\item Brad S.~Gregory,
+  \href{https://www.youtube.com/watch?v=CqJvLScpn_Y\&t=2s}{\emph{The~Unintended
+      Reformation}}.
+\item \href{https://www.youtube.com/watch?v=-Z_9L4fE8mA}
+  {\emph{Andrzej Nowak o~polityce historycznej}}.
+\item Jonathan Israel,
+  \href{https://www.youtube.com/watch?v=WBcP7TAVkNQ}{\emph{Radical
+      Enlightenment and the~Making~of the~French Revolution
+      (1750--1800)}}.
+\item Jacek Bartyzel,
+  \href{https://www.youtube.com/watch?v=O1YEi-p1XlU}{\emph{Liberalizm
+      -- cichy zabójca Europy}}\footnote{Następna pozycja jest inną
+    wersją tego wystąpienia, lecz ponieważ zawiera kilka nieobecnych
+    tu~bardzo cennych idei, również go~zamieszczam.}.
+\item Jacek Bartyzel,
+  \href{https://www.youtube.com/watch?v=CxbB16SWq9g}{\emph{Wspólne
+      źródła liberalizmu i totalnej demokracji}}.
+\item Andrzej Nowak \href{https://www.youtube.com/watch?v=yfQ7rpq_irA}
+  {\emph{Jak Zachód sprzedał Europę Wschodnią Rosji?}}.
+\item Płk. Piotr Wroński,
+  \href{https://www.youtube.com/watch?v=grUVKH7woxE}{\emph{Służby
+      specjalne w~komunizmie i~demokracji --~wykład}}.
+\end{enumerate}
+
+\vspace{\spaceOne}
+
+
+
+% ####################################################################
+\Field{Polska}
+
+
+
+\begin{enumerate}
+\item Jarosław Marek Rymkiewicz, \emph{Samuel Zborowski};
+\item Andrzej Nowak, \emph{Dzieje Polski};
+\item Richard Butterwick, \emph{Polska rewolucja a~Kościół Katolicki
+    1788--1792};
+\item Adam Mickiewicz, \emph{Pan Tadeusz};
+\item Adam Mickiewicz, \emph{Dziady};
+\item Adam Mickiewicz, \emph{Księgi narodu i~pielgrzymstwa polskiego};
+\item Jan Sowa, \emph{Fantomowe ciało król. Peryferyjne zmagania
+    z~nowoczesną formą}.
+\item Michał Łuczewski, \emph{Odwieczny naród. Polak i~katolik
+    w~Żmiącej}.
+\item Krzysztof Kąkolewski, \emph{Diament odnaleziony
+    w~popiele}\footnote{Książka w~wielu miejscach napisana w~zły,
+    chaotyczny sposób, który utrudnia zrozumienie o~co chodzi, mimo to
+    wciąż wartościowa.}.
+\item Jolanta Szymkowska\dywiz Bartyzel, \emph{Nasza Ameryka
+    wyobrażona. Polskie spotkania z~amerykańską kulturą popularna
+    po~1918 roku}.
+\item Jacek Dukaj, \emph{Wroniec}.
+\item Larry Wolff, \emph{Inventing Eastern Europe: The~Map~of
+    Civilization on the~Mind~of the~Enlightenment}.
+\item Łukasz Drozda, \emph{Lewactwo. Historia dyskursu o~polskiej
+    lewicy radykalnej};
+\item Paweł Zyzak,
+  \href{https://www.youtube.com/watch?v=_83RZpqZhwA}{\emph{Spotkanie
+      promocyjne książki ,,Efekt domina''}}, Węgrów 25.01.2017~r.
+
+\item Zofia Romaszewska, Irena Lasota, Czesław Bielecki, Piotr
+  Wawrzyk, Paweł Zyzak
+  \href{https://www.youtube.com/watch?v=HPcq9KMjkI4\&t=5s}{\emph{Efekt
+      domina. Czy~Ameryka obaliła komunizm w~Polsce?}}, 9.03.2017~r.
+\item Paweł Zyzak,
+  \href{https://www.youtube.com/watch?v=VhOWJeENLk8}{\emph{Czy Ameryka
+      obaliła komunizm w~Polsce?}};
+\item
+  \href{https://www.youtube.com/watch?v=HVrV3Xc9gow\&t=1s}{\emph{Tragiczny
+      schyłek PRL-u}} \emph{w~najnowszej rozprawie historycznej Pawła
+    Zyzaka};
+\item Antoni Dudek, \href{https://www.youtube.com/watch?v=WLyKBTgDSZg}
+  {\emph{Reglementowa rewolucja}};
+\item Antoni Dudek,
+  \href{https://www.youtube.com/watch?v=uPB50xcKnJA}{\emph{Okrągły
+      stół --~przemiana czy~przekręt?}}, 19.10.2016~r.
+\item Antoni Dudek,
+  \href{https://www.youtube.com/watch?v=MTjE-GK9WGM}{\emph{Geneza
+      stanu wojennego}}, Poznań, 10 grudnia 2014~r.;
+\item \href{https://www.youtube.com/watch?v=WLyKBTgDSZg}
+  {\emph{Odwieczny naród. Polak i~katolik w~Żmiącej}}.
+\item Dr~puł.~Lech Kowalski,
+  \href{https://www.youtube.com/watch?v=mJu0393YY0c} {\emph{Czesław
+      Kiszczak --~prawdziwa historia}};
+\item Sławomir Cenckiewicz, \emph{Refleksje o~okrągłym stole},
+  \href{https://www.youtube.com/watch?v=rmK_DtAZBnM}{\emph{Część~I}},
+  \href{https://www.youtube.com/watch?v=-kSeA25NJK8}{\emph{Część~II}};
+\item \href{https://www.youtube.com/watch?v=H0pB_66MDz8}{\emph{Nasza
+      Ameryka wyobrażona, promocja książki dr~Jolanty Bartyzel}};
+\item Andrzej Nowak,
+  \href{https://www.youtube.com/watch?v=K10gwYW6JeE}{\emph{Aleksander
+      i~Mikołaj a~sprawa polska:}} \emph{spór o~wschodnią orientację
+    polskich nadziei};
+\end{enumerate}
+
+\vspace{\spaceTwo}
+
+
+
+\Work{Artykuły}
+
+\begin{enumerate}
+\item Paweł Rzewuski,
+  \href{http://www.teologiapolityczna.pl/pawel-rzewuski-odpowiedzialnosc-za-wolyn-tpct-40-}{\emph{Odpowiedzialność
+      za~Wołyń}};
+\end{enumerate}
+
+\vspace{\spaceOne}
+
+
+
+\Work{YouTube}
+
+\begin{enumerate}
+\item Tadeusz Lubelski,
+  \href{https://www.youtube.com/watch?v=my8nccykDWQ}{\emph{Sami
+      Swoi}};
+\end{enumerate}
+
+\vspace{\spaceOne}
+
+
+
+% ####################################################################
+\Field{Niemcy}
+% ####################################################################
+
+
+
+\begin{enumerate}
+\item Tomasz Mann, \emph{Doktor Faustus. Żywot kompozytora
+    niemieckiego Adriana Leverk\"{u}hna opowiedziany przez
+    przyjaciela};
+\item
+  \href{https://www.youtube.com/watch?v=moHu6fGkOwA}{\emph{Aleksandra
+      Rybińska i~Michał Kuź o~Niemczech --~18.07.2016~r.}};
+\item Włodzimierz Borodziej,
+  \href{https://www.youtube.com/watch?v=yQ0gfxVCN00}{\emph{Sąsiad nowy
+      --~czy stary? Niemcy 2015}};
+\end{enumerate}
+
+\vspace{\spaceOne}
+
+
+
+% ####################################################################
+\Field{Rosja}
+
+
+
+\begin{enumerate}
+\item Dmitry Glukhovsky, \emph{Witajcie w~Rosji};
+\end{enumerate}
+
+\vspace{\spaceOne}
+
+
+
+% ##############################
+\Work{Patriotyzm, narody, nacjonalizm}
+
+
+
+\begin{displayquote}
+  Obecny wybór jest przechylony na~stronę niechętną narodom, wynika
+  to~z~charakteru źródeł, dzięki którym zebrałem te~pozycje.
+  W~przyszłości postaram~się uczynić go~lepszym, bardziej
+  zbalansowanym.
+\end{displayquote}
+
+\begin{enumerate}
+\item Andrzej Nowak, \emph{Od~Polski do~post\dywiz polityki.
+    Intelektualna historia zapaści Rzeczpospolitej};
+\item Michael Billing, \emph{Banalny nacjonalizm};
+\item Ernest Gellner, \emph{Narody i~nacjonalizm};
+\item Homi Bhabha, \emph{Miejsca kultury};
+\item Red.~Eric Hobsbawm, Terence Ranger, \emph{Tradycja wynaleziona};
+\item Benedict Anderson, \emph{Wspólnoty wyobrażone: rozważania
+    o~źródłach i~rozprzestrzenianiu się nacjonalizmu};
+\item Thomas Hylland Eriksen, \emph{Etniczność i nacjonalizm. Ujęcie
+    antropologiczne};
+\item Tim Edensor, \emph{Tożsamość narodowa, kultura popularna i~życie
+    codzienne};
+\item Anthony D. Smith, \emph{Etniczne źródła narodów};
+\item Anthony D. Smith, \emph{Kulturowe podstawy narodów};
+\end{enumerate}
+
+
+
+% ####################################################################
+\Field{Podróże do~dziwnych krainy}
+
+
+
+\begin{enumerate}
+\item Anna Burzyńska, Michał Paweł Markowski, \emph{Teorie literatury
+    XX~wieku: podręcznik};
+\end{enumerate}
+
+\vspace{\spaceOne}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CenterTB{Nauka i~nauczanie}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{enumerate}
+\item Carl Wieman,
+  \href{https://www.youtube.com/watch?v=aBEPXfY7Elw}{\emph{Taking
+      a~Scientific Approach to~Science Education}};
+\end{enumerate}
+
+
+
+
+
+
+% ####################################################################
+\CenterTB{Poboczne i~lżejsze}
+
+
+
+\begin{enumerate}
+\item Tadeusz Lubelski,
+  \href{https://www.youtube.com/watch?v=bp47Zk2JN90\&index=1\&list=PLGVPA5rfUcppi-kSDESRjPwiNV4aPsQi7}
+  {Historia Kina Polskiego};
+\item Dr~Tomasz ,,Awesome'' Majkowski,
+  \href{https://www.youtube.com/watch?v=4gM3LbnPBmc}
+  {\emph{Of~Certainty and~Authenticity}};
+\item Dr~Tomasz ,,Awesome'' Majkowski,
+  \href{https://www.youtube.com/watch?v=nGN5_m_IxfY}{\emph{Grotesque
+      Realism and~the~Joy~of Destruction}};
+\end{enumerate}
+
+\vspace{\spaceOne}
+
+
+
+% ####################################################################
+\Field{Bieżące, całkiem możliwe, że~bez większego znaczenia}
+% ####################################################################
+
+
+
+\begin{enumerate}
+\item \item Peter Robinson i~Robert Costa,
+  \href{https://www.youtube.com/watch?v=DYFvuBM-Vms}{\emph{Understanding
+      Donald Trump}};
+\item
+  \href{https://www.youtube.com/watch?v=CxbB16SWq9g}{\emph{Imperfect
+      Union: The Eurozone in Crisis --~Full Episode}};
+\item Tod Lindberg, James Kirchick,
+  \href{https://www.youtube.com/watch?v=ubFZVVHCY60}{\emph{The~End~Of
+      Europe}}, 15.03.2017~r.
+\item Roger Scruton,
+  \href{https://www.youtube.com/watch?v=Bvlg8YK3iSU}{\emph{Brexit: yes
+      or~no?}};
+\item Alister McGrath,
+  \href{https://www.youtube.com/watch?v=rb86hxwb_Yc}{\emph{The~New
+      Atheism and~the~Dialogue between Science and~Faith}};
+\end{enumerate}
+
+
+
+\bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+
+\end{document}
